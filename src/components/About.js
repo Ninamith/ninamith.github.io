@@ -6,12 +6,16 @@ class About extends Component {
             <section id="about">
                 <div className="row">
                     <div className="three columns">
-                        {/* <img className="profile-pic" src= alt="Tim Baker Profile Pic" /> */}
+                        <img className="profile-pic" src="me.jpg"/>
                     </div>
                     <div className="nine columns main-col">
                         <h2>About Me</h2>
 
-                        {/* <p>{bio}</p> */}
+                        <p>As a third year computer science student at the University of Waterloo, I have both in-class 
+                            internship experience working at software companies. Take a look at my "internship" page to see
+                            where I have worked, or "projects" to see things I have worked on in class and on my own, or check
+                            out my *very* amateur photography!
+                        </p>
                         <div className="row">
                             <div className="columns contact-details">
                                 <h2>Contact Details</h2>
