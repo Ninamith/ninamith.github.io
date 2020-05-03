@@ -9,10 +9,10 @@ class NavBar extends Component {
                <ul id="nav" className="nav">
                   <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
                   <li><a className="smoothscroll" href="#about">About</a></li>
-                  <li><a className="smoothscroll" href="#resume">Internships</a></li>
-                  <li><a className="smoothscroll" href="#portfolio">Projects</a></li>
-                  <li><a className="smoothscroll" href="#testimonials">Photography</a></li>
-                  <li><a className="smoothscroll" href="#contact">Contact</a></li>
+                  <li><a className="smoothscroll" href="#internships">Internships</a></li>
+                  <li><a className="smoothscroll" href="#skills">Skills</a></li>
+                  <li><a className="smoothscroll" href="#projects">Projects</a></li>
+                  <li><a className="smoothscroll" href="#photography">Photography</a></li>
                </ul>
       
             </nav>
