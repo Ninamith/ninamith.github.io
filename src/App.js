@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import About from './components/About';
 import Internships from './components/Internships';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
         <About/>
         <Internships/>
         <Skills/>
+        <Projects />
       </div>
     );
   }

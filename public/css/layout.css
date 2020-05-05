@@ -820,6 +820,12 @@ call-to-action .button {
     cursor: default;
 }
 
+
+#projects .specialGrid {
+  margin-top: -28%;
+  margin-left: 33%;
+}
+
 /* ------------------------------------------------------------------ */
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
