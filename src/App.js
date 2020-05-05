@@ -5,6 +5,7 @@ import About from './components/About';
 import Internships from './components/Internships';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Photography from './components/Photography';
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
         <Internships/>
         <Skills/>
         <Projects />
+        <Photography/>
       </div>
     );
   }

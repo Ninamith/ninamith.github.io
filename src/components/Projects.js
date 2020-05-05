@@ -163,6 +163,8 @@ export default function AutoGrid() {
                     </Grid>
                 </Container>
             </div>
+            <br/>
+            <br/>
         </section>
     );
 }

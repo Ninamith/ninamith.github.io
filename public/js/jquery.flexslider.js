@@ -23,7 +23,7 @@
         watchedEventClearTimer,
         vertical = slider.vars.direction === "vertical",
         reverse = slider.vars.reverse,
-        carousel = (slider.vars.itemWidth > 0),
+        Carousell = (slider.vars.itemWidth > 0),
         fade = slider.vars.animation === "fade",
         asNav = slider.vars.asNavFor !== "",
         methods = {},
@@ -401,19 +401,19 @@
                 e.preventDefault();
               } else if ( ( window.navigator.msPointerEnabled ) || e.touches.length === 1 ) {
                 slider.pause();
-                // CAROUSEL:
+                // Carouselll:
                 cwidth = (vertical) ? slider.h : slider. w;
                 startT = Number(new Date());
-                // CAROUSEL:
+                // Carousell:
 
                 // Local vars for X and Y points.
                 localX = e.touches[0].pageX;
                 localY = e.touches[0].pageY;
 
-                offset = (carousel && reverse && slider.animatingTo === slider.last) ? 0 :
-                         (carousel && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
-                         (carousel && slider.currentSlide === slider.last) ? slider.limit :
-                         (carousel) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
+                offset = (Carousell && reverse && slider.animatingTo === slider.last) ? 0 :
+                         (Carousell && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
+                         (Carousell && slider.currentSlide === slider.last) ? slider.limit :
+                         (Carousell) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
                          (reverse) ? (slider.last - slider.currentSlide + slider.cloneOffset) * cwidth : (slider.currentSlide + slider.cloneOffset) * cwidth;
                 startX = (vertical) ? localY : localX;
                 startY = (vertical) ? localX : localY;
@@ -485,12 +485,12 @@
                     accDx = 0;
                     cwidth = (vertical) ? slider.h : slider. w;
                     startT = Number(new Date());
-                    // CAROUSEL:
+                    // Carousell:
 
-                    offset = (carousel && reverse && slider.animatingTo === slider.last) ? 0 :
-                        (carousel && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
-                            (carousel && slider.currentSlide === slider.last) ? slider.limit :
-                                (carousel) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
+                    offset = (Carousell && reverse && slider.animatingTo === slider.last) ? 0 :
+                        (Carousell && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
+                            (Carousell && slider.currentSlide === slider.last) ? slider.limit :
+                                (Carousell) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
                                     (reverse) ? (slider.last - slider.currentSlide + slider.cloneOffset) * cwidth : (slider.currentSlide + slider.cloneOffset) * cwidth;
                 }
             }
@@ -555,12 +555,12 @@
       },
       resize: function() {
         if (!slider.animating && slider.is(':visible')) {
-          if (!carousel) slider.doMath();
+          if (!Carousell) slider.doMath();
 
           if (fade) {
             // SMOOTH HEIGHT:
             methods.smoothHeight();
-          } else if (carousel) { //CAROUSEL:
+          } else if (Carousell) { //Carousell:
             slider.slides.width(slider.computedW);
             slider.update(slider.pagingCount);
             slider.setProps();
@@ -670,9 +670,9 @@
         // CONTROLNAV
         if (slider.vars.controlNav) methods.controlNav.active();
 
-        // !CAROUSEL:
+        // !Carousell:
         // CANDIDATE: slide active class (for add/remove slide)
-        if (!carousel) slider.slides.removeClass(namespace + 'active-slide').eq(target).addClass(namespace + 'active-slide');
+        if (!Carousell) slider.slides.removeClass(namespace + 'active-slide').eq(target).addClass(namespace + 'active-slide');
 
         // INFINITE LOOP:
         // CANDIDATE: atEnd
@@ -694,7 +694,7 @@
               margin, slideString, calcNext;
 
           // INFINITE LOOP / REVERSE:
-          if (carousel) {
+          if (Carousell) {
             //margin = (slider.vars.itemWidth > slider.w) ? slider.vars.itemMargin * 2 : slider.vars.itemMargin;
             margin = slider.vars.itemMargin;
             calcNext = ((slider.itemW + margin) * slider.move) * slider.animatingTo;
@@ -741,7 +741,7 @@
     }
     slider.wrapup = function(dimension) {
       // SLIDE:
-      if (!fade && !carousel) {
+      if (!fade && !Carousell) {
         if (slider.currentSlide === 0 && slider.animatingTo === slider.last && slider.vars.animationLoop) {
           slider.setProps(dimension, "jumpEnd");
         } else if (slider.currentSlide === slider.last && slider.animatingTo === 0 && slider.vars.animationLoop) {
@@ -809,7 +809,7 @@
       var target = (function() {
         var posCheck = (pos) ? pos : ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo,
             posCalc = (function() {
-              if (carousel) {
+              if (Carousell) {
                 return (special === "setTouch") ? pos :
                        (reverse && slider.animatingTo === slider.last) ? 0 :
                        (reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
@@ -855,8 +855,8 @@
             slider.container.empty().append(slider.slides);
           }
         }
-        // INFINITE LOOP && !CAROUSEL:
-        if (slider.vars.animationLoop && !carousel) {
+        // INFINITE LOOP && !Carousell:
+        if (slider.vars.animationLoop && !Carousell) {
           slider.cloneCount = 2;
           slider.cloneOffset = 1;
           // clear out old clones
@@ -867,7 +867,7 @@
 
         sliderOffset = (reverse) ? slider.count - 1 - slider.currentSlide + slider.cloneOffset : slider.currentSlide + slider.cloneOffset;
         // VERTICAL:
-        if (vertical && !carousel) {
+        if (vertical && !Carousell) {
           slider.container.height((slider.count + slider.cloneCount) * 200 + "%").css("position", "absolute").width("100%");
           setTimeout(function(){
             slider.newSlides.css({"display": "block"});
@@ -898,9 +898,9 @@
         // SMOOTH HEIGHT:
         if (slider.vars.smoothHeight) methods.smoothHeight();
       }
-      // !CAROUSEL:
+      // !Carousell:
       // CANDIDATE: active slide
-      if (!carousel) slider.slides.removeClass(namespace + "active-slide").eq(slider.currentSlide).addClass(namespace + "active-slide");
+      if (!Carousell) slider.slides.removeClass(namespace + "active-slide").eq(slider.currentSlide).addClass(namespace + "active-slide");
     }
 
 
@@ -914,8 +914,8 @@
       slider.h = slide.height();
       slider.boxPadding = slide.outerWidth() - slide.width();
 
-      // CAROUSEL:
-      if (carousel) {
+      // Carousell:
+      if (Carousell) {
         slider.itemT = slider.vars.itemWidth + slideMargin;
         slider.minW = (minItems) ? minItems * slider.itemT : slider.w;
         slider.maxW = (maxItems) ? (maxItems * slider.itemT) - slideMargin : slider.w;
@@ -942,7 +942,7 @@
       slider.doMath();
 
       // update currentSlide and slider.animatingTo if necessary
-      if (!carousel) {
+      if (!Carousell) {
         if (pos < slider.currentSlide) {
           slider.currentSlide += 1;
         } else if (pos <= slider.currentSlide && pos !== 0) {
@@ -953,10 +953,10 @@
 
       // update controlNav
       if (slider.vars.controlNav && !slider.manualControls) {
-        if ((action === "add" && !carousel) || slider.pagingCount > slider.controlNav.length) {
+        if ((action === "add" && !Carousell) || slider.pagingCount > slider.controlNav.length) {
           methods.controlNav.update("add");
-        } else if ((action === "remove" && !carousel) || slider.pagingCount < slider.controlNav.length) {
-          if (carousel && slider.currentSlide > slider.last) {
+        } else if ((action === "remove" && !Carousell) || slider.pagingCount < slider.controlNav.length) {
+          if (Carousell && slider.currentSlide > slider.last) {
             slider.currentSlide -= 1;
             slider.animatingTo -= 1;
           }
@@ -1076,12 +1076,12 @@
     sync: "",                       //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
     asNavFor: "",                   //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
 
-    // Carousel Options
-    itemWidth: 0,                   //{NEW} Integer: Box-model width of individual carousel items, including horizontal borders and padding.
-    itemMargin: 0,                  //{NEW} Integer: Margin between carousel items.
-    minItems: 1,                    //{NEW} Integer: Minimum number of carousel items that should be visible. Items will resize fluidly when below this.
-    maxItems: 0,                    //{NEW} Integer: Maxmimum number of carousel items that should be visible. Items will resize fluidly when above this limit.
-    move: 0,                        //{NEW} Integer: Number of carousel items that should move on animation. If 0, slider will move all visible items.
+    // Carousell Options
+    itemWidth: 0,                   //{NEW} Integer: Box-model width of individual Carousell items, including horizontal borders and padding.
+    itemMargin: 0,                  //{NEW} Integer: Margin between Carousell items.
+    minItems: 1,                    //{NEW} Integer: Minimum number of Carousell items that should be visible. Items will resize fluidly when below this.
+    maxItems: 0,                    //{NEW} Integer: Maxmimum number of Carousell items that should be visible. Items will resize fluidly when above this limit.
+    move: 0,                        //{NEW} Integer: Number of Carousell items that should move on animation. If 0, slider will move all visible items.
     allowOneSlide: true,           //{NEW} Boolean: Whether or not to allow a slider comprised of a single slide
 
     // Callback API

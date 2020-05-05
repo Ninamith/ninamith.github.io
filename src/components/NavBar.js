@@ -6,7 +6,7 @@ class NavBar extends Component {
             <header id="home">
       
             <nav id="nav-wrap">
-               <ul id="nav" className="nav">
+               <ul id="navv" className="navv">
                   <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
                   <li><a className="smoothscroll" href="#about">About</a></li>
                   <li><a className="smoothscroll" href="#internships">Internships</a></li>
@@ -20,7 +20,7 @@ class NavBar extends Component {
             <div className="row banner">
                <div className="banner-text">
                   <h1>Sakina Mithani</h1>
-                  <span>Third year computer science student at the University of Waterloo</span>
+                  <span id="introSub">Third year computer science student at the University of Waterloo</span>
                   <hr />
                </div>
             </div>
