@@ -1,9 +1,11 @@
 {
-  "name": "portfolio-webstie",
+  "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ninamith.github.io/portfolio-website",
   "dependencies": {
     "@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",
     "bootstrap": "^4.3.1",
     "flat-carousel": "0.0.1",
     "jquery": "^3.5.0",
@@ -18,9 +20,13 @@
     "reactstrap": "^8.4.1",
     "styled-components": "^4.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
