@@ -16,9 +16,9 @@ class About extends Component {
                     <div className="nine columns main-col">
                         <h2>About Me</h2>
 
-                        <p>As a third year computer science student at the University of Waterloo, I have both in-class 
-                            internship experience working at software companies. Take a look at my "internship" page to see
-                            where I have worked, or "projects" to see things I have worked on in class and on my own, or check
+                        <p>As a fourth year computer science student at the University of Waterloo (Expected Graduation:  December, 2021), 
+	                    I have both in-class and internship experience working as a software engineer. Take a look at my "internship" page to see
+                            where I have worked, or "projects" to see things I have worked on in class and on my own. Just for fun, check
                             out my *very* amateur photography!
                         </p>
                         <div className="row">

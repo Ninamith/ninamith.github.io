@@ -129,8 +129,39 @@ export default function AutoGrid() {
                             </Card>
                         </Grid>
                     </Grid>
-                    <br/>
-                    <Grid container spacing={3} className="specialGrid">
+<Grid container spacing={3} className="specialSide">
+                        <Grid item xs>
+                            <Card className={classes.secondaryRoot}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        alt="Contemplative Reptile"
+                                        height="140"
+                                        width="100"
+                                        image="finalSale.png"
+                                        title="Contemplative Reptile"
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h4" component="h2">
+                                        Final-Sale WebCrawler
+          </Typography>
+                                        <Typography variant="h5" color="textSecondary" component="p">
+                                        Webcrawler designed to retrieve all final sale items from clothing store
+                                        Dynamite's sale page using python's Scrapy framework and handling output as JSON file.
+          </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button size="medium" color="primary">
+                                    <a href="#about">https://github.com/Ninamith/final-sale-webcrawler</a>
+                                    </Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+
+                    </Grid>
+                   
+ <Grid container spacing={3} className="specialGrid">
                         <Grid item xs={4}>
                             <Card className={classes.secondaryRoot}>
                                 <CardActionArea>

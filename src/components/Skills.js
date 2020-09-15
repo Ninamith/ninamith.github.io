@@ -12,7 +12,8 @@ class Skills extends Component {
                 <Chip label="Java" />
                 <Chip label="C++" />
                 <Chip label="C" />
-                <Chip label="Racket" />
+                <Chip label="Python" />
+		<Chip label="Racket" />
                 <Chip label="HTML" />
                 <Chip label="CSS" />
                 <Chip label="JavaScript" />

@@ -20,7 +20,7 @@ class NavBar extends Component {
             <div className="row banner">
                <div className="banner-text">
                   <h1>Sakina Mithani</h1>
-                  <span id="introSub">Third year computer science student at the University of Waterloo</span>
+                  <span id="introSub">Fourth year computer science student at the University of Waterloo</span>
                   <hr />
                </div>
             </div>

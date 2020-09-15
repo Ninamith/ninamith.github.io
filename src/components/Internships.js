@@ -11,7 +11,9 @@ class Internships extends Component {
                 <li className="jobTitle">TheZenith – A Fairfax Company • Software Engineer • September 2019 – December 2019</li>
                     <li className="description">Developing new features to improve user experience in a recently implemented web insurance application using Java and TeaVM</li>
                     <li className="description">Building predictive models to auto-fill questions on forms using neural networks, specifically leveraging Neuroph and Deep Netts Platform</li>
-                <br/>
+                    <li className="description">Prototyped new architecture model by exploring efficient saving techniques such as debouncing and throttling</li>
+		    <li className="description">Built automated test cases using Selenium WebDriver Framework</li>
+		 <br/>
                 <Divider/>
                 <br/>
                 <li className="jobTitle">American Express • Software Engineer • January 2019 – April 2019</li>
