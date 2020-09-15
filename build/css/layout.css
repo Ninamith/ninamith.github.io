@@ -834,8 +834,12 @@ call-to-action .button {
 
 
 #projects .specialGrid {
-  margin-top: -28%;
+  margin-top: -45%;
   margin-left: 33%;
+}
+
+#projects .specialSide {
+  margin-top: -15%;
 }
 
 /* ------------------------------------------------------------------ */
